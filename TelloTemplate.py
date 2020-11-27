@@ -37,11 +37,20 @@ def sendmsg(msg, sleep = 6):
     time.sleep(sleep)
 
 # recvThread create
+
+
 recvThread = threading.Thread(target=recv)
 recvThread.start()
 
-
 # CREATE FUNCTIONS HERE....
+
+# Square function with a for loop
+
+
+def square():
+    for i in range(4):
+        sendmsg('forward 100')
+        sendmsg('ccw 90')
 
 
 print("\nEsther Hedin")
@@ -56,13 +65,17 @@ try:
     if ready.lower() == 'yes':
         print("\nStarting Drone!\n")
 
-        sendmsg('command', 0)
-        sendmsg('takeoff')
+        sendmsg('command')
+        sendmsg('takeoff', 8)
 
+<<<<<<< Updated upstream
         # Make a square within a for loop
         for i in range(4):
             sendmsg('forward 100')
             sendmsg('ccw 90')
+=======
+        square()
+>>>>>>> Stashed changes
 
         sendmsg('land')
 
