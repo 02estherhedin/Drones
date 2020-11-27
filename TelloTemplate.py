@@ -52,6 +52,9 @@ def square():
         sendmsg('forward 100')
         sendmsg('ccw 90')
 
+def flip():
+    sendmg('flip f')
+
 
 print("\nEsther Hedin")
 print("Program Name: Drone Flying School")
@@ -68,8 +71,9 @@ try:
         sendmsg('command')
         sendmsg('takeoff', 8)
 
-        square()
-
+        # square()
+        flip()
+        
         sendmsg('land')
 
         print('\nGreat Flight!!!')
